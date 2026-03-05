@@ -14,7 +14,7 @@
     "description": "Customer forgot password and requested reset.",
     "customer": "Karim Hasan",
     "priority": "Medium",
-    "status": "Resolved",
+    "status": "In Progress",
     "createdAt": "2025-03-02"
   },
   {
@@ -41,7 +41,7 @@
     "description": "User unable to update profile information.",
     "customer": "Tanvir Islam",
     "priority": "Low",
-    "status": "Resolved",
+    "status": "Open",
     "createdAt": "2025-03-05"
   },
   {
@@ -77,7 +77,7 @@
     "description": "Users cannot upload documents to the portal.",
     "customer": "Mahmud Hasan",
     "priority": "Medium",
-    "status": "Resolved",
+    "status": "In Progress",
     "createdAt": "2025-03-09"
   },
   {
@@ -91,7 +91,7 @@
   },
   {
     "id": 11,
-    "title": "Two-factor authentication issue",
+    "title": "Two-factor  issue",
     "description": "OTP code not arriving on user phone.",
     "customer": "Imran Ali",
     "priority": "High",
@@ -104,7 +104,7 @@
     "description": "Buttons are misaligned on mobile screen.",
     "customer": "Mim Akter",
     "priority": "Low",
-    "status": "Resolved",
+    "status": "In Progress",
     "createdAt": "2025-03-12"
   }
 ]

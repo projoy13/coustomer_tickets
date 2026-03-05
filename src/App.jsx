@@ -1,127 +1,54 @@
 
+import { Suspense } from 'react'
 import './App.css'
-import btnImg from "./assets/Vector.png"
-import logo from "./assets/logo.avif"
-import vec1 from "./assets/vector1.png"
+
+
+import Coustomertickets from './componests/Coustomertickets'
+import Middelbar from './componests/Middelbar'
+import Navbar from './componests/Navbar'
+import Ticketstatus from './componests/Ticketstatus'
+
+const fetchTickets=fetch("/tickets.json")
+.then(res =>res.json())
 
 
 function App() {
  
+ 
 
   return (
     <>
-    <div className='bg-gray-100 max-w-[1200px] '>
+     <Navbar>
+    
+  </Navbar>
+
+  <Middelbar>
+
+  </Middelbar>
+    
 
     
-    <div className=" banner navbar bg-base-100 shadow-sm max-w-[1200px] m-auto p-20px  ">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-        <li><a>FAQ</a></li>
-        <li><a>Changelog</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Download</a></li>
-        <li><a>Contact</a></li>
-        
-         
-      </ul>
-    </div>
-    <img className='w-[70px]' src={logo} alt="" />
-  </div>
- 
-  <div className="navbar-end">
-     <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Home </a></li>
-      <li><a>FAQ</a></li>
-      <li><a>Chnagelog</a></li>
-      <li><a>Blog</a></li>
-      <li><a>Download</a></li>
-      <li><a>Contact</a></li>
-      
-      
-    </ul>
-  </div>
-  
-  <div className='btn  bg-gradient-to-r from-[#632EE3] via-[#8148EB] to-[#9F62F2]'>
-
-  <button className=''>
-    <div className='flex  gap-3 justify-between justify-center'>
-
-
-      <div>
-         <img className='w-[7px] h-[7px] mt-2' src={btnImg} alt="" />
-
-      </div>
-<div className='text-white'>
- New Ticket
-</div>
-    </div>
    
 
+
  
 
-  </button>
-  
+{/* coustomer tickets */}
+<Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
+  <Coustomertickets fetchTickets={fetchTickets} >
 
-</div>
-  </div>
-</div>
+</Coustomertickets>
 
 
- <div className="middel-banner max-w-[1200px] mx-auto p-4 flex flex-col md:flex-row gap-6 mt-10">
+</Suspense>
 
-  {/* Card 1 */}
-  <div className="rounded-md w-full md:w-1/2 h-[180px] flex items-center justify-center bg-gradient-to-r from-[#632EE3] via-[#8148EB] to-[#9F62F2]">
 
-    <div className="flex items-center justify-center gap-4">
+{/* ticket status */}
 
-      <div>
-        <img src={vec1} alt="" className="" />
-      </div>
+<Ticketstatus>
 
-      <div className="text-center">
-        <h1 className="text-lg md:text-2xl text-white">Resolved</h1>
-        <span className="text-3xl md:text-4xl text-white">0</span>
-      </div>
-
-      <div>
-        <img src={vec1} alt="" className="flip-img " />
-      </div>
-
-    </div>
-
-  </div>
-
-  {/* Card 2 */}
-  <div className="rounded-md w-full md:w-1/2 h-[180px] flex items-center justify-center bg-gradient-to-r from-[#54CF68] via-[#2AA971] to-[#00827A]">
-
-    <div className="flex items-center justify-center gap-4">
-
-      <div>
-        <img src={vec1} alt="" className="" />
-      </div>
-
-      <div className="text-center">
-        <h1 className="text-lg md:text-2xl text-white">Resolved</h1>
-        <span className="text-3xl md:text-4xl text-white">0</span>
-      </div>
-
-      <div>
-        <img src={vec1} alt="" className="flip-img " />
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
+</Ticketstatus>
+{/* Ticket resolved */}
 
 
 
@@ -189,7 +116,7 @@ function App() {
   </div>
 </footer>
 
-</div>
+
 
 
 
