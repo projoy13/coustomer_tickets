@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-    <div className='bg-gray-100'>
+    <div className='bg-gray-100 max-w-[1200px] '>
 
     
     <div className=" banner navbar bg-base-100 shadow-sm max-w-[1200px] m-auto p-20px  ">
@@ -29,7 +29,7 @@ function App() {
         <li><a>Download</a></li>
         <li><a>Contact</a></li>
         
-        <li><a>Item 3</a></li>
+         
       </ul>
     </div>
     <img className='w-[70px]' src={logo} alt="" />
@@ -48,6 +48,7 @@ function App() {
       
     </ul>
   </div>
+  
   <div className='btn  bg-gradient-to-r from-[#632EE3] via-[#8148EB] to-[#9F62F2]'>
 
   <button className=''>
@@ -74,61 +75,127 @@ function App() {
 </div>
 
 
-  <div className='Middel banner max-w-[1200px] m-auto p-2px flex justify-center space-x-10 mt-10 '>
+ <div className="middel-banner max-w-[1200px] mx-auto p-4 flex flex-col md:flex-row gap-6 mt-10">
 
+  {/* Card 1 */}
+  <div className="rounded-md w-full md:w-1/2 h-[180px] flex items-center justify-center bg-gradient-to-r from-[#632EE3] via-[#8148EB] to-[#9F62F2]">
 
-  <div className=' rounded-md w-[500px] h-[200px] text-center  bg-gradient-to-r from-[#632EE3] via-[#8148EB] to-[#9F62F2]   '>
-
-   
-  <div className="flex items-center justify-center gap-4">
-  
-  <div className="image-1 mt-5">
-    <img src={vec1} alt="" />
-  </div>
-
-  <div>
-    <h1 className="text-2xl text-white">Resolved</h1>
-  <span className='text-4xl text-white'>0</span>
-
-  </div>
-  <div className='mt-20 '>
-   
-  </div>
-
-  <div className="image-2 mt-5">
-    <img className="flip-img" src={vec1} alt="" />
-  </div>
-
-</div>
-    
-    
-  </div>
-
-  <div className='rounded-md w-[500px] h-[200px] text-center  bg-gradient-to-r from-[#54CF68] via-[#2AA971] to-[#00827A] '>
     <div className="flex items-center justify-center gap-4">
+
+      <div>
+        <img src={vec1} alt="" className="" />
+      </div>
+
+      <div className="text-center">
+        <h1 className="text-lg md:text-2xl text-white">Resolved</h1>
+        <span className="text-3xl md:text-4xl text-white">0</span>
+      </div>
+
+      <div>
+        <img src={vec1} alt="" className="flip-img " />
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* Card 2 */}
+  <div className="rounded-md w-full md:w-1/2 h-[180px] flex items-center justify-center bg-gradient-to-r from-[#54CF68] via-[#2AA971] to-[#00827A]">
+
+    <div className="flex items-center justify-center gap-4">
+
+      <div>
+        <img src={vec1} alt="" className="" />
+      </div>
+
+      <div className="text-center">
+        <h1 className="text-lg md:text-2xl text-white">Resolved</h1>
+        <span className="text-3xl md:text-4xl text-white">0</span>
+      </div>
+
+      <div>
+        <img src={vec1} alt="" className="flip-img " />
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+<footer className="bg-black text-white px-10 py-10 mt-10">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+
+   
+    <div className="max-w-md text-left">
+    <h1 className='text-xl font-bold'> Ticket system</h1>
+      <p>
+        Our company ticket system is designed to efficiently manage and track
+        employee requests, technical issues, and support tasks within the
+        organization. 
+      </p>
+    </div>
+
+    
+    <div>
+      <ul className="space-y-2">
+        <li className="font-bold">Contact</li>
+        <li>Contact Us</li>
+        <li>About Us</li>
+        <li>Our Mission</li>
+        <li>Contact Sales</li>
+      </ul>
+    </div>
+
+    
+    <div>
+      <ul className="space-y-2">
+        <li className="font-bold">Service</li>
+        <li>Product & Service</li>
+        <li>Customer Stories</li>
+        <li>Download App</li>
+      </ul>
+    </div>
+
+    
+    <div>
+      <ul className="space-y-2">
+        <li className="font-bold">Information</li>
+        <li>Privacy Policy</li>
+        <li>Terms & Condition</li>
+        <li>Join Us</li>
+      </ul>
+    </div>
+
+    
+    <div>
+      <ul className="space-y-2">
+        <li className="font-bold">Social Links</li>
+        <li>@CS — Ticket System</li>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>Email</li>
+      </ul>
+    </div>
+
+  </div>
+
   
-  <div className="image-1 mt-5">
-    <img src={vec1} alt="" />
+  <div className="border-t border-gray-700 mt-8 pt-4 text-center">
+    <p>© 2025 CS — Ticket System. All rights reserved.</p>
   </div>
-
-   <div>
-    <h1 className="text-2xl text-white">Resolved</h1>
-  <span className='text-4xl text-white'>0</span>
-
-  </div>
-
-  <div className="image-2 mt-5">
-    <img className="flip-img" src={vec1} alt="" />
-  </div>
-
-</div>
-    
-    
-  </div>
+</footer>
 
 </div>
 
-</div>
+
+
+
+
+
     
     
     </>

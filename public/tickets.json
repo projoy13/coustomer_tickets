@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue",
+    "description": "User cannot log into the system.",
+    "customer": "Rahim Ahmed",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-03-01"
+  },
+  {
+    "id": 2,
+    "title": "Password reset request",
+    "description": "Customer forgot password and requested reset.",
+    "customer": "Karim Hasan",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-03-02"
+  },
+  {
+    "id": 3,
+    "title": "Website loading slow",
+    "description": "The homepage takes too long to load.",
+    "customer": "Nusrat Jahan",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-03-03"
+  },
+  {
+    "id": 4,
+    "title": "Email notification not working",
+    "description": "System is not sending email notifications.",
+    "customer": "Fahim Chowdhury",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-03-04"
+  },
+  {
+    "id": 5,
+    "title": "Profile update error",
+    "description": "User unable to update profile information.",
+    "customer": "Tanvir Islam",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-03-05"
+  },
+  {
+    "id": 6,
+    "title": "Payment failed",
+    "description": "Customer payment failed during checkout.",
+    "customer": "Sadia Akter",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-03-06"
+  },
+  {
+    "id": 7,
+    "title": "Mobile app crash",
+    "description": "Application crashes when opening dashboard.",
+    "customer": "Arif Hossain",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-03-07"
+  },
+  {
+    "id": 8,
+    "title": "Search not returning results",
+    "description": "Search feature is not showing expected results.",
+    "customer": "Jannat Sultana",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-03-08"
+  },
+  {
+    "id": 9,
+    "title": "File upload problem",
+    "description": "Users cannot upload documents to the portal.",
+    "customer": "Mahmud Hasan",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-03-09"
+  },
+  {
+    "id": 10,
+    "title": "Dashboard data incorrect",
+    "description": "Reports on dashboard show wrong numbers.",
+    "customer": "Shila Rahman",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-03-10"
+  },
+  {
+    "id": 11,
+    "title": "Two-factor authentication issue",
+    "description": "OTP code not arriving on user phone.",
+    "customer": "Imran Ali",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-03-11"
+  },
+  {
+    "id": 12,
+    "title": "UI alignment problem",
+    "description": "Buttons are misaligned on mobile screen.",
+    "customer": "Mim Akter",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-03-12"
+  }
+]
