@@ -6,7 +6,7 @@ const Middelbar = ({inProcess,resolved}) => {
         <div  className='bg-gray-100 max-w-[1600px]'>
             <div className="}middel-banner max-w-[1600px] mx-auto p-4 flex flex-col md:flex-row gap-6 mt-10">
 
-  {/* Card 1 */}
+ 
   <div className="rounded-md w-full md:w-1/2 h-[180px] flex items-center justify-center bg-gradient-to-r from-[#632EE3] via-[#8148EB] to-[#9F62F2]">
 
     <div className="flex items-center justify-center gap-4">
@@ -28,7 +28,7 @@ const Middelbar = ({inProcess,resolved}) => {
 
   </div>
 
-  {/* Card 2 */}
+
   <div className="rounded-md w-full md:w-1/2 h-[180px] flex items-center justify-center bg-gradient-to-r from-[#54CF68] via-[#2AA971] to-[#00827A]">
 
     <div className="flex items-center justify-center gap-4">

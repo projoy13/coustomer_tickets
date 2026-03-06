@@ -7,6 +7,7 @@ import Coustomertickets from './componests/Coustomertickets'
 import Middelbar from './componests/Middelbar'
 import Navbar from './componests/Navbar'
 import Ticketstatus from './componests/Ticketstatus'
+import { ToastContainer } from 'react-toastify';
 
 const fetchTickets=fetch("/tickets.json")
 .then(res =>res.json())
@@ -19,6 +20,7 @@ function App() {
  const [resolved,setResolved]=useState(0)
  const [selectedTicket,setSelectedticket]=useState([])
 //  console.log(selectedTicket)
+
 
   return (
     <>
@@ -37,7 +39,7 @@ function App() {
 
  
 
-{/* coustomer tickets */}
+
 <div className='flex'>
   <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
   <Coustomertickets fetchTickets={fetchTickets} setinProcess={setinProcess} setResolved={setResolved} selectedTicket={selectedTicket} setSelectedticket={setSelectedticket}   >
@@ -49,12 +51,12 @@ function App() {
 </Suspense>
 
 
-{/* ticket status */}
 
-<Ticketstatus selectedTicket={selectedTicket} fetchTickets={fetchTickets}  >
+
+<Ticketstatus  selectedTicket={selectedTicket} fetchTickets={fetchTickets} setinProcess={setinProcess} setResolved={setResolved} >
  
 </Ticketstatus>
-{/* Ticket resolved */}
+
 
 
 </div>
@@ -62,7 +64,7 @@ function App() {
 
 
 
-<footer className="bg-black text-white px-10 py-10 mt-10 max-w-[1200px]">
+<footer className="bg-black text-white px-10 py-10 mt-10 max-w-[1600px]">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
 
    
@@ -133,7 +135,7 @@ function App() {
 
 
     
-    
+     <ToastContainer />
     </>
   )
 }

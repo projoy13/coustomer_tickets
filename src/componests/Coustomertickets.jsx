@@ -11,16 +11,16 @@ const Coustomertickets = ({fetchTickets,setinProcess,setResolved,selectedTicket,
     return (
         <div className="max-w-[1200px] mx-auto mt-10 px-4">
 
-  {/* HEADER TITLES */}
+  
   <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
     <h1 className="text-2xl font-bold"> Coustomers Tickets</h1>
    
   </div>
 
-  {/* MAIN CONTENT */}
+  
   <div className="flex flex-col lg:flex-row gap-8">
 
-    {/* LEFT SIDE — Tickets */}
+   
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 flex-1">
 
 

@@ -1,15 +1,19 @@
+import { toast } from "react-toastify";
+
 const Ticketcard = ({ ticket, setinProcess, selectedTicket, setSelectedticket }) => {
 
   const handleClick = (ticket) => {
     setinProcess((prev) => prev + 1);
-
     setSelectedticket([...selectedTicket, ticket]);
   };
 
   return (
     <div>
       <div
-        onClick={() => handleClick(ticket)}
+        onClick={() => {
+          handleClick(ticket);
+          toast("Ticket added to process");
+        }}
         className="bg-base-100 w-full shadow-sm rounded-lg hover:scale-105 transition duration-300"
       >
         <div className="card-body">
