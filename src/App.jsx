@@ -40,7 +40,7 @@ function App() {
  
 
 
-<div className='flex'>
+<div className='flex max-w-[1600px]'>
   <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
   <Coustomertickets fetchTickets={fetchTickets} setinProcess={setinProcess} setResolved={setResolved} selectedTicket={selectedTicket} setSelectedticket={setSelectedticket}   >
    

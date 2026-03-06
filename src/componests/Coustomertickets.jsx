@@ -9,7 +9,7 @@ const Coustomertickets = ({fetchTickets,setinProcess,setResolved,selectedTicket,
     
        
     return (
-        <div className="max-w-[1200px] mx-auto mt-10 px-4">
+        <div className="max-w-[1600px] mx-auto mt-10 px-4">
 
   
   <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">

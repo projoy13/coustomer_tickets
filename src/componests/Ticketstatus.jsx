@@ -6,7 +6,7 @@ const Ticketstatus = ({ selectedTicket, setinProcess, setResolved, setSelectedti
   const handleComplete = (ticket) => {
     setinProcess((prev) => prev - 1);
     setResolved((prev) => prev + 1);
-    toast("process completed")
+    toast("process completed");
    
 
     
@@ -16,7 +16,7 @@ const Ticketstatus = ({ selectedTicket, setinProcess, setResolved, setSelectedti
   };
 
   return (
-    <div className="max-w-[400px] mt-6">
+    <div className="max-w-[1600px] mt-6">
       <h2 className="text-xl font-bold mb-4">Tasks In Process</h2>
 
       {selectedTicket.length === 0 && (
