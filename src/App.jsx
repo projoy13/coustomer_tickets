@@ -16,6 +16,9 @@ const fetchTickets=fetch("/tickets.json")
 function App() {
  
  const [inProcess,setinProcess]=useState(0)
+ const [resolved,setResolved]=useState(0)
+ const [selectedTicket,setSelectedticket]=useState([])
+//  console.log(selectedTicket)
 
   return (
     <>
@@ -23,7 +26,7 @@ function App() {
     
   </Navbar>
 
-  <Middelbar inProcess={inProcess}>
+  <Middelbar inProcess={inProcess} resolved={resolved} >
 
   </Middelbar>
     
@@ -35,8 +38,9 @@ function App() {
  
 
 {/* coustomer tickets */}
-<Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
-  <Coustomertickets fetchTickets={fetchTickets} setinProcess={setinProcess}  >
+<div className='flex'>
+  <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
+  <Coustomertickets fetchTickets={fetchTickets} setinProcess={setinProcess} setResolved={setResolved} selectedTicket={selectedTicket} setSelectedticket={setSelectedticket}   >
    
 
 </Coustomertickets>
@@ -47,10 +51,13 @@ function App() {
 
 {/* ticket status */}
 
-<Ticketstatus>
+<Ticketstatus selectedTicket={selectedTicket} fetchTickets={fetchTickets}  >
  
 </Ticketstatus>
 {/* Ticket resolved */}
+
+
+</div>
 
 
 

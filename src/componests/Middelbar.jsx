@@ -1,7 +1,7 @@
 import React from 'react';
 import vec1 from "../assets/vector1.png"
 
-const Middelbar = ({inProcess}) => {
+const Middelbar = ({inProcess,resolved}) => {
     return (
         <div  className='bg-gray-100 max-w-[1600px]'>
             <div className="}middel-banner max-w-[1600px] mx-auto p-4 flex flex-col md:flex-row gap-6 mt-10">
@@ -38,8 +38,8 @@ const Middelbar = ({inProcess}) => {
       </div>
 
       <div className="text-center">
-        <h1 className="text-lg md:text-2xl text-white">Resolved</h1>
-        <span className="text-3xl md:text-4xl text-white">0</span>
+        <h1 className="text-lg md:text-2xl text-white"> Resolved</h1>
+        <span className="text-3xl md:text-4xl text-white">{resolved}</span>
       </div>
 
       <div>
