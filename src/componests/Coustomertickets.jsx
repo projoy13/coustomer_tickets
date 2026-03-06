@@ -1,57 +1,65 @@
 import React, { use } from 'react';
+import Ticketcard from './Ticketcard';
 
-const Coustomertickets = ({fetchTickets}) => {
+
+const Coustomertickets = ({fetchTickets,setinProcess}) => {
         
     const Ticketsdata=use(fetchTickets)
     console.log(Ticketsdata)
-    return (
-        <div className='bg-gray-100'>
-<h1 className='text-2xl'>
-    Coustomer Tickets
-</h1>
-{
-    Ticketsdata.map(ticket=>  <div className="card-1  bg-base-100 w-96 shadow-sm hover:scale-110 transition duration-300">
-      <div className="card-body">
-<div className='flex justify-between justify-items-center'>
-     <div> <h2 className="card-title">{ticket.title}</h2></div>
-     <div className=' border-1 rounded-2xl w-20 text-center'><p>{ticket.status}</p></div>
-
-</div>
-<div>
-    <p>{ticket.description}</p>
-</div>
-   
     
-    <div className="card-end">
+       
+    return (
+        <div className="max-w-[1200px] mx-auto mt-10 px-4">
 
-     <div className='flex justify-between'>
-        <div className='flex space-x-3'>
-            <h1>{ticket.id}</h1>
-            <p className={`${
-    ticket.priority === "High"
-      ? "text-red-500"
-      : ticket.priority === "Medium"
-      ? "text-yellow-500"
-      : "text-green-500"
-  }`}>{ticket.priority}</p>
-        </div>
-        <div className=' flex space-x-3'>
-            <h1>{ticket.customer}</h1>
-            <p>{ticket.createdAt}</p>
+  {/* HEADER TITLES */}
+  <div className="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+    <h1 className="text-2xl font-bold"> Coustomers Tickets</h1>
+    <h1 className="text-2xl font-bold ml-[-55px]">Task Status</h1>
+  </div>
 
-        </div>
+  {/* MAIN CONTENT */}
+  <div className="flex flex-col lg:flex-row gap-8">
 
-     </div>
+    {/* LEFT SIDE — Tickets */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 flex-1">
 
+      {
+      Ticketsdata.map((ticket) => <Ticketcard ticket={ticket} setinProcess={setinProcess}>
+
+      </Ticketcard>
+        
+      )
+      }
 
     </div>
-  </div>
-</div>)
-}
 
-         
-           
+   
+    <div className="space-y-5 lg:w-[320px] mt-6 lg:mt-0">
+
+      <div className="card bg-base-100 shadow-sm">
+        <div className="card-body">
+          <h2 className="card-title">card Titel</h2>
+        <div>
+            <button className="btn btn-wide bg-green-600">Complete</button>
+          </div>
+
         </div>
+      </div>
+
+      <div className=" bg-base-100 shadow-sm p-2">
+        <div className="body">
+          
+          <p>Tasks currently being worked on.</p>
+          
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+         
     );
 };
 

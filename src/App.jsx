@@ -1,5 +1,5 @@
 
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 
 
@@ -12,9 +12,10 @@ const fetchTickets=fetch("/tickets.json")
 .then(res =>res.json())
 
 
+
 function App() {
  
- 
+ const [inProcess,setinProcess]=useState(0)
 
   return (
     <>
@@ -22,7 +23,7 @@ function App() {
     
   </Navbar>
 
-  <Middelbar>
+  <Middelbar inProcess={inProcess}>
 
   </Middelbar>
     
@@ -35,7 +36,8 @@ function App() {
 
 {/* coustomer tickets */}
 <Suspense fallback={<span className="loading loading-spinner text-primary"></span>}>
-  <Coustomertickets fetchTickets={fetchTickets} >
+  <Coustomertickets fetchTickets={fetchTickets} setinProcess={setinProcess}  >
+   
 
 </Coustomertickets>
 
@@ -46,14 +48,14 @@ function App() {
 {/* ticket status */}
 
 <Ticketstatus>
-
+ 
 </Ticketstatus>
 {/* Ticket resolved */}
 
 
 
 
-<footer className="bg-black text-white px-10 py-10 mt-10">
+<footer className="bg-black text-white px-10 py-10 mt-10 max-w-[1200px]">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
 
    

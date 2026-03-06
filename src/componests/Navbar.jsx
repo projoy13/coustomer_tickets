@@ -4,8 +4,8 @@ import logo from "../assets/logo.avif"
 
 const Navbar = () => {
     return (
-        <div  className='bg-gray-100 max-w-[1200px]'>
-             <div className=" banner navbar bg-base-100 shadow-sm max-w-[1200px] m-auto p-20px  ">
+        <div  className='bg-gray-100 max-w-[1600px]'>
+             <div className=" banner navbar bg-base-100 shadow-sm max-w-[1600px] m-auto p-20px  ">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

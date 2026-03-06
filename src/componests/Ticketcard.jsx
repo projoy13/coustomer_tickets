@@ -1,0 +1,64 @@
+import React, { use } from 'react';
+
+const Ticketcard = ({ticket,setinProcess }) => {
+
+    return (
+        <div >
+            <div onClick={() => setinProcess((prev) => prev + 1)}
+          key={ticket.id}
+          className="bg-base-100 w-full shadow-sm rounded-lg hover:scale-105 transition duration-300"
+        >
+          <div className="card-body">
+
+            <div className="flex justify-between items-center">
+              <h4 className="card-title">{ticket.title}</h4>
+
+              <div
+                className={`border rounded-2xl px-3 py-1 text-center
+                ${
+                  ticket.status === "Open"
+                    ? "text-green-700 bg-green-300"
+                    : ticket.status === "In Progress"
+                    ? "text-yellow-700 bg-yellow-200"
+                    : ""
+                }`}
+              >
+                {ticket.status}
+              </div>
+            </div>
+
+            <p>{ticket.description}</p>
+
+            <div className="flex justify-between mt-3 flex-wrap gap-2">
+
+              <div className="flex gap-3">
+                <span>{ticket.id}</span>
+
+                <span
+                  className={`${
+                    ticket.priority === "High"
+                      ? "text-red-500"
+                      : ticket.priority === "Medium"
+                      ? "text-yellow-500"
+                      : "text-green-500"
+                  }`}
+                >
+                  {ticket.priority}
+                </span>
+              </div>
+
+              <div className="flex gap-3 flex-wrap">
+                <span>{ticket.customer}</span>
+                <span>{ticket.createdAt}</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+            
+        </div>
+    );
+};
+
+export default Ticketcard;

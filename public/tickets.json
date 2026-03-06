@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "title": "Email notification not working",
+    "title": "Email is not working",
     "description": "System is not sending email notifications.",
     "customer": "Fahim Chowdhury",
     "priority": "High",
@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "title": "Search not returning results",
+    "title": "Search not showing results",
     "description": "Search feature is not showing expected results.",
     "customer": "Jannat Sultana",
     "priority": "Medium",
